@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Desserts */
+.desserts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 70%;
+}
+
+.dessert-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.dessert-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.dessert-card h2 {
+  text-align: left;
+  font-size: 18px;
+  margin: 15px 0 10px;
+}
+
+.dessert-card p{
+text-align: left;
+}
+
+.dessert-card .price {
+  color: #ff5e00e1;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart {
+  display: flex;
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  justify-content: space-between;
+  padding: 2px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart p{
+  text-align: right;
+}
+
+.add-to-cart img{
+  width: 20px;
+}
+
+.add-to-cart:hover {
+  background-color: #ff4500;
+}
+
+.dessert-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cart Section */
+.cart {
+  width: 30%;
+  height: 30%;
+  background-color: white;
+  border: 5px solid whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.cart h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ff6347;
+}
+
+.cart-icon {
+  margin-top: 20px;
+}
+
+.cart-icon img {
+  width: 80px;
+  height: auto;
+}
+
+.cart-icon p {
+  margin-top: 10px;
+  color: #888;
+}
+/* Media Queries */
+
+/* Tablet Portrait */
+@media only screen and (max-width: 1024px) {
+  .desserts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart {
+    width: 30%;
+  }
+}
+
+/* Mobile Landscape */
+@media only screen and (max-width: 768px) {
+  .desserts-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cart {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+  }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 480px) {
+  .dessert-card {
+    padding: 15px;
+  }
+
+  .add-to-cart {
+    padding: 8px 15px;
+  }
+
+  .cart h2 {
+    font-size: 18px;
+  }
+}
+#total{
+  height:25px;
+  width: 90px;
+  background-color: rgba(179, 176, 167, 0.527);
+  color: rgb(19, 13, 13);
+  border-radius: 5px;
+}
